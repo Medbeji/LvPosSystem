@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LvClub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="LvClub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,12 +17,118 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lvclub-wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="xww-4B-Whw"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pS2-oW-ASV">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ah7-nD-BMX">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Utilisateur :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-uK-vSi">
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                <color key="textColor" red="0.97415633820000003" green="1" blue="0.95958337299999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-uH-op2">
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Vgh-im-jDO"/>
+                                            <constraint firstAttribute="width" constant="500" id="Zfe-rI-gYC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E33-Aa-rzU">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mot de passe :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z79-sd-N7A">
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                <color key="textColor" red="0.97415633820000003" green="1" blue="0.95958337299999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ei1-Fu-ngK">
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="1en-4O-MYJ"/>
+                                            <constraint firstAttribute="width" constant="500" id="znc-t3-Xrz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lvclub-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5CG-x5-4XS">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="aon-Dr-lVy"/>
+                                            <constraint firstAttribute="height" constant="139" id="iyU-yb-K67"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ah7-nD-BMX" firstAttribute="leading" secondItem="pS2-oW-ASV" secondAttribute="leading" constant="106" id="Fo1-oF-g9j"/>
+                                    <constraint firstItem="5CG-x5-4XS" firstAttribute="top" secondItem="pS2-oW-ASV" secondAttribute="top" id="Mzd-JU-SuM"/>
+                                    <constraint firstItem="ah7-nD-BMX" firstAttribute="top" secondItem="5CG-x5-4XS" secondAttribute="bottom" constant="11" id="ewy-4e-lOJ"/>
+                                    <constraint firstItem="E33-Aa-rzU" firstAttribute="top" secondItem="ah7-nD-BMX" secondAttribute="bottom" constant="8" id="ns5-wg-h6r"/>
+                                    <constraint firstItem="5CG-x5-4XS" firstAttribute="centerX" secondItem="pS2-oW-ASV" secondAttribute="centerX" id="ooa-LG-RcL"/>
+                                    <constraint firstItem="E33-Aa-rzU" firstAttribute="leading" secondItem="pS2-oW-ASV" secondAttribute="leading" constant="105" id="rtd-LW-hCl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOJ-h0-4Ga">
+                                <frame key="frameInset" minX="437" minY="403" width="157" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.35686274509803922" blue="0.19215686274509805" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.97415633820000003" green="1" blue="0.95958337299999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xww-4B-Whw" secondAttribute="trailing" id="4di-q9-QB1"/>
+                            <constraint firstItem="xww-4B-Whw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Pi-Kg-Le7"/>
+                            <constraint firstItem="pS2-oW-ASV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="AOM-Ja-JlG"/>
+                            <constraint firstItem="xww-4B-Whw" firstAttribute="centerX" secondItem="pS2-oW-ASV" secondAttribute="centerX" id="EHr-r6-bof"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pS2-oW-ASV" secondAttribute="bottom" constant="140" id="NLe-11-UZd"/>
+                            <constraint firstItem="pS2-oW-ASV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="165" id="PXa-b1-8f7"/>
+                            <constraint firstItem="xww-4B-Whw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="SiV-Ra-Yqc"/>
+                            <constraint firstItem="xww-4B-Whw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="imV-kT-zKA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="71"/>
+            <point key="canvasLocation" x="-191.015625" y="70.3125"/>
+        </scene>
+        <!--Table DetailVC-->
+        <scene sceneID="fXR-vq-kZJ">
+            <objects>
+                <viewController id="9bi-eD-BXa" customClass="TableDetailVC" customModule="LvClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8C8-LF-86N"/>
+                        <viewControllerLayoutGuide type="bottom" id="mbN-Bk-pek"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HkN-4b-R9T">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTG-rd-sCz">
+                                <frame key="frameInset" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92329727564102559" green="0.92329727564102559" blue="0.92329727564102559" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNS-Ya-kFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505.66406249999994" y="69.53125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lvclub-logo" width="260" height="260"/>
+        <image name="lvclub-wallpaper" width="960" height="540"/>
+    </resources>
 </document>
